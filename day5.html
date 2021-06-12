@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THADAY5</title>
+    <style>
+        .cal{
+            margin-top: 40px;
+            margin-left: 30%;
+        }
+        h1{
+            text-shadow: 2px 2px gray;
+        }
+        form{
+            height: 50%;
+            width:60%;
+            background: linear-gradient(rgb(255, 115, 0),black);
+            padding-top: 50px;
+            padding-bottom: 120px;
+            text-align: center;
+            
+        }
+        form input{
+            margin: 20px;
+            padding:20px;
+            border: none;
+           
+        }
+        form input:focus{
+            border: none;
+            
+        }
+        .but{
+            margin: 20px;
+            padding: auto;
+            padding-top: 5px;
+           
+            width:80px;
+            height:50px;
+            background:rgb(0, 255, 221);
+            font-size: 30px;
+            border:none;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="cal">
+    <form name="myForm" action="">
+        <h2>Calculator</h2>
+        <input type="text" id="num1" placeholder="Enter the number" name="num1"><br>
+        <input type="text" id="num2" placeholder="Enter second Number" name="num2"> <br>
+        <input type="button" class="but" onclick="adding()" value="+"> <input type="button" class="but" onclick="sub()" value="-"><br>
+        <input type="button" class="but" onclick="mul()" value="*"> <input type="button" class="but" onclick="div()" value="/"><br>
+        <input type="text" id="res" placeholder="ANSWER" name="res">
+    </form></div>
+    <script>
+
+        function adding(){    
+            document.getElementById("res").value = parseInt(document.getElementById("num1").value)+parseInt(document.getElementById("num2").value);
+
+        }
+        function sub(){
+            document.getElementById("res").value = parseInt(document.getElementById("num1").value)-parseInt(document.getElementById("num2").value);
+
+        }
+        function mul(){
+            document.getElementById("res").value = parseInt(document.getElementById("num1").value)*parseInt(document.getElementById("num2").value);
+        }
+        function div(){
+            document.getElementById("res").value = parseInt(document.getElementById("num1").value)/parseInt(document.getElementById("num2").value);
+        }
+
+    </script>
+
+</body>
+</html>
